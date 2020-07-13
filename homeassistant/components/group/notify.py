@@ -153,7 +153,7 @@ class GroupNotifyPlatform(BaseNotificationService):
         """Send message to all entities in the group."""
         if self.switch and not is_on(self.hass, self.switch):
             _LOGGER.debug(
-                "Group notification %s blocked message due to switch off", self.name
+                "%s blocked message because not enabled", self.name
             )
             return
 
